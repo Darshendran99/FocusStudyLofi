@@ -1,4 +1,4 @@
-var status = 'NONE'
+var musicLevel = 'NONE'
 var audio = document.createElement('audio')
 
 /* Artist : Kevin MacLeod and Reinsamba
@@ -14,26 +14,30 @@ audio.setAttribute('src', 'FocusStudyLofi.mp3')
 audio.setAttribute('loop', 'true')
 
   function audio_control() {
-    switch (status) {
+    switch (musicLevel) {
       case 'NONE':
         audio.play()
-        audio.volume = 0.5
-        status = 'LOW'
+        audio.volume = 0.25
+        musicLevel = 'LOW'
         break
       case 'LOW':
-        audio.volume = 1
-        status = 'HIGH'
+        audio.volume = 0.5
+        musicLevel = 'MEDIUM'
         break
-      case 'HIGH':
+        case 'MEDIUM':
+          audio.volume = 1.0
+          musicLevel = 'MAX'
+          break
+      case 'MAX':
         audio.pause()
-        status = 'NONE'
+        musicLevel = 'NONE'
         break
     }
 
     browser.browserAction.setIcon({
   path: {
-    "38": "icons/studyLofi_" + status + "_38.png",
-    "19": "icons/studyLofi_" + status + "_19.png",
+    "38": "icons/studyLofi_" + musicLevel + "_38.png",
+    "19": "icons/studyLofi_" + musicLevel + "_19.png",
   }
 })
 

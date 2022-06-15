@@ -6,8 +6,8 @@
   "description": "Plays a Copyright Free Lofi rain ambience sound for users to improve productivity",
 
   "icons":{
-    "128": "icons/studyLofi_128.jpg",
-    "48": "icons/studyLofi_48.jpg"
+    "128": "icons/studyLofi_128.png",
+    "48": "icons/studyLofi_48.png"
   },
 
   "background":{
@@ -20,5 +20,4 @@
         "19": "icons/studyLofi_NONE_19.png"
       }
     }
-
 }
